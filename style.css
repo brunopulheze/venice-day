@@ -1,0 +1,168 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    overflow: hidden;
+}
+
+main {
+    width: 800px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    border: 30px solid rgb(243, 151, 169);
+}
+
+.cadoro  {
+    width: 100%;
+    height: 80%;
+    display: block;
+    top: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.cadoro > img {
+    width: 100%;
+    height: 100%;
+}
+
+.sea {
+    width: 150%;
+    height: 40%;
+    top: 300px;
+    left: -200px;
+    position: absolute;
+    z-index: 10;
+    animation: sea 10s infinite;
+}
+
+.sea > img {
+    width: 100%;
+    height: 100%;
+    
+}
+
+.gondola {
+    width: 350px;
+    height: 200px;
+    top: 250px;
+    position: absolute;
+    z-index: 100;
+    animation: gondola 10s infinite;
+}
+
+.gondola > img {
+    width: 100%;
+    height: 100%;
+}
+
+.fish {
+    width: 70px;
+    height: 50px;
+    top: 350px;
+    left: 560px;
+    position: absolute;
+    z-index: 50;
+    animation: fish 10s infinite;    
+    opacity: 0;
+}
+
+.fish > img {
+    width: 100%;
+    height: 100%;
+}
+
+.seagull {
+    width: 150px;
+    height: 100px;
+    top: 100px;
+    left: 700px;
+    position: absolute;
+    z-index: 90;
+    animation: seagull 10s ease infinite;
+}
+
+.seagull > img {
+    height: 100%;
+    width: 100%;
+}
+
+@keyframes gondola {
+    0% {
+        transform: translateX(-200px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(800px);
+    }
+}
+
+@keyframes sea {
+    0% {
+        transform: translateX(10px);
+    }
+    50% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(200px);
+    }
+}
+
+@keyframes fish {
+    0% {
+        opacity: 0;
+    }
+    29% {
+        opacity: 0;
+    }
+    30% {
+        top: 350px;
+        left: 560px;
+        opacity: 1;
+    }
+    40% {
+        top: 300px;
+        left: 560px;
+        opacity: 1;
+    }
+    60%{
+        top: 80px;
+        opacity: 1;
+    }
+    100%{
+        top: 80px;
+        left: -750px;
+    }
+}
+
+@keyframes seagull {
+    0% {
+        top: 100px;
+        left: 800px;
+        }
+    30% {
+        top: 100px;
+        left: 800px;
+    }
+    40% {
+        top: 230px;
+        left: 490px;
+        }
+    60% {
+        top: 0;
+        opacity: 1;
+    }
+    100% {
+        top: 0;
+        left: -800px;
+        opacity: 1;
+    }
+}
+
